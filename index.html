@@ -29,12 +29,17 @@
                     <input v-model="nome" type="text" placeholder="Nome">
                     <input v-model="cognome" type="text" placeholder="Cognome">
                     <input v-model="userName" type="text" placeholder="Alias">
+
+                    <button class="btn"@click="sayHi">SayHi</button>
                 </div>
                 <div class="block user">
-                    <h2>{{ titleInterface}}</h2>
-                    <img class="account" :src="image2" alt="userName">
-                    <h3 :class="class2">{{ nome }} {{ cognome }}</h3>
-                    <p class="alias-info">{{ userName }}</p>
+                    <div :class="class3">
+                        <h2>{{ titleInterface}}</h2>
+                        <img class="account" :src="image2" alt="userName">
+                        <h3 :class="class2">{{ nome }} {{ cognome }}</h3>
+                        <p class="alias-info">{{ userName }}</p>
+                        <button class="btn" @click="changeColor">Change color</button>
+                    </div>
                 </div>
             </div>
         </div>
