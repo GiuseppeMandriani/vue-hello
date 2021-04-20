@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- CSS STYLE -->
     <link rel="stylesheet" href="./css/main.css">
     <!-- VUE -->
@@ -13,8 +16,27 @@
 <body>
     <div id="app">
         <div class="container">
-            <h1 :class="myClasses">{{ title }}</h1>
+            <h1 :class="class1">{{ title }}</h1>
             <img :src="image" class="i" alt="">
+        </div>
+
+
+        <div class="try">
+            <h2>Try to Do your interface</h2>
+            <div class="interface">
+                <div class="block">
+                    <input v-model="titleInterface" type="text" placeholder="Title of your interface">
+                    <input v-model="nome" type="text" placeholder="Nome">
+                    <input v-model="cognome" type="text" placeholder="Cognome">
+                    <input v-model="userName" type="text" placeholder="Alias">
+                </div>
+                <div class="block user">
+                    <h2>{{ titleInterface}}</h2>
+                    <img class="account" :src="image2" alt="userName">
+                    <h3 :class="class2">{{ nome }} {{ cognome }}</h3>
+                    <p class="alias-info">{{ userName }}</p>
+                </div>
+            </div>
         </div>
     </div>
 
